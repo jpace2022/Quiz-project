@@ -5,10 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css"/>
-    <title>Document</title>
+    <title>Snowboarding Quiz!</title>
 </head>
 <body>
-    
+<header>
+    <button class="button" id="view-highscore">Highscore</button>
+    <h1 class="title-section">Snowboarding Quiz</h1>
+    <div class="timer-area">
+            <p id="timer"> 60 seconds</p>
+            <h4>Time Remaining!</h4>
+    </div>
+</header>
+<main>
+    <section class="title-page" id="title-page">
+        <div id="Intro">
+            <h1>Send the Quiz. Show me what you got!</h1>
+            <p>Please hit the start button to begin. Every missed question will take away time. You've been warned...</p>
+            <button class="button" id="start">Start!</button>
+        </div>
+    </section>  
+
+            <section class="question" id="question">
+                <div>
+                    <h2 id="question-asked">Ask</h2>
+                    <ul>
+                        <li><button class="answer" id="answer1"></button></li>
+                        <li><button class="answer" id="answer2"></button></li>
+                        <li><button class="answer" id="answer3"></button></li>
+                    </ul>
+                </div>
+                <div id="linecheck">
+                    <p>Wrong / Right</p>
+                </div>
+            </section>
+            <sectioin class="submit" id="submit">
+                <div>
+                    <h2 id="complete">Done</h2>
+                    <p id="overall score"> Here's how you did.</p>
+                    <p>Add you initials
+                        <input id="Initials">
+                        <button class="button" id="button-submit">Submit!</button>
+                    </p>
+                </div>
+            </sectioin>
+            
+    </section>
+
+    <section class="highscore" id="highscore">
+        <div>
+            <h2>New High Score</h2>
+            <div id="score-tracker"><p>New Score</p></div>
+            <button class="button" id="back-button">Back</button>
+            <button class="button" id="clear-button">Clear</button>
+        </div>
+    </section>
+</main>
+    <footer>
+        <h1>Enjoy!</h1>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 

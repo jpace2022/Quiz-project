@@ -18,7 +18,7 @@ var titlePage = document.querySelector("#title-page")
 var question = document.querySelector("#question")
 var questionAsked = document.querySelector("#question-asked")
 
-var answerButton = document.querySelectorAll(".answers")
+var answerButton = document.querySelectorAll(".answer")
 var answer1 = document.querySelector("#answer1")
 var answer2 = document.querySelector("#answer2")
 var answer3 = document.querySelector("#answer3")
@@ -99,7 +99,7 @@ function countdown() {
     var timeSpan = setInterval(function() {
         timeRemaining--;
         timer.textContent = "Time Remaining: " + timeRemaining;
-        if (timer <=0) {
+        if (timeRemaining <=0) {
             clearInterval(timeSpan);
             timer.textContent = "Times up!";
             complete.textContent = "Times up!";
@@ -130,7 +130,7 @@ function questionShown (n) {
 }
 
 function answerCheck(event) {
-    event.prevenDefault();
+    event.preventDefault();
     linecheck.style.display = "block";
     setTimeout(function (){
         linecheck.style.display = "none";
@@ -154,7 +154,7 @@ if (numberQuestions < questions.length -1) {
     count++;
 }
 function gameOver() {
-    questions.style.display = "none";
+    question.style.display = "none";
     score.style.display = "block";
     console.log(score);
     overallScore.textContent = "Final score "+ overallScore;
@@ -204,7 +204,7 @@ function sort() {
 
 function saveScore () {
     var scoreItem = {
-        user: userInitial.value,
+        user: userInitial.value
         score: totalScore
     }
     addItem(scoreItem);

@@ -42,7 +42,7 @@ var numberQuestions = 0;
 var overallScore = 0;
 var count = 1;
 
-var question = [
+var questions = [
     {
     question: "Where did snowboarding first appear?",
     answers: ["a. United States", "b. Austria", "c. Norway"],
@@ -74,7 +74,7 @@ var question = [
     answer: "a"
     },
     {
-    uestion: "What is the name of the first manufacturer of snowboards?",
+    question: "What is the name of the first manufacturer of snowboards?",
     answers: ["a. Burton Snowboards", "b. Brunswick Corporation", "c. Poppen Snowboards"],
     answer: "b"
     },
@@ -136,7 +136,7 @@ function answerCheck(event) {
         linecheck.style.display = "none";
 
     }, 1000);
-}
+
 
 if (questions[numberQuestions].answer == event.target.value) {
     linecheck.textContent = "Right!";
@@ -152,7 +152,7 @@ if (numberQuestions < questions.length -1) {
         gameOver();
     }
     count++;
-
+}
 function gameOver() {
     questions.style.display = "none";
     score.style.display = "block";
@@ -211,7 +211,7 @@ function saveScore () {
     renderScore();
 }
 
-start.addEventListener("click", startQuiz);
+start.addEventListener("click", beginQuiz);
 
 answerButton.forEach(function(click){
 click.addEventListener("click", answerCheck);

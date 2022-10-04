@@ -204,7 +204,7 @@ function sort() {
 
 function saveScore () {
     var scoreItem = {
-        user: userInitial.value
+        user: initials.value,
         score: totalScore
     }
     addItem(scoreItem);
@@ -240,7 +240,7 @@ backButton.addEventListener("click", function(event){
     score.style.display = "none";
     titlePage.style.display = "block";
     highscore.style.display = "none";
-    questions.style.display = "none"
+    question.style.display = "none"
     location.reload();
 });
 

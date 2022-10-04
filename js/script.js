@@ -42,70 +42,70 @@ var numberQuestions = 0;
 var overallScore = 0;
 var count = 1;
 
-var questions = [
+var question = [
     {
-    question: "Where did snowboarding first appear?"
-    answers: ["a. United States", "b. Austria", "c. Norway"]
+    question: "Where did snowboarding first appear?",
+    answers: ["a. United States", "b. Austria", "c. Norway"],
     answer: "a"
     },
     {
-    question: "When was snopwboarding developed?"
-    answers: ["a. 1970s", "b. 1990s", "c. 1960s"]
+    question: "When was snopwboarding developed?",
+    answers: ["a. 1970s", "b. 1990s", "c. 1960s"],
     answer: "c"
     },
     {
-    question: "When did snowboarding become a winter olympic sport?"
-    answers: ["a. 1998", "b. 1994", "c. 1990"]
+    question: "When did snowboarding become a winter olympic sport?",
+    answers: ["a. 1998", "b. 1994", "c. 1990"],
     answer: "b"
     },
     {
-    question: "Who invented snowboarding?"
-    answers: ["a. Sherman Poppen", "b. Tom Sins", "c. Jame Burton"]
+    question: "Who invented snowboarding?",
+    answers: ["a. Sherman Poppen", "b. Tom Sins", "c. Jame Burton"],
     answer: "a"
     },
     {
-    question: "What was the first name given to snowboarding?"
-    answers: ["a. snowsliding", "b. Snurfing", "c. Snurfall"]
+    question: "What was the first name given to snowboarding?",
+    answers: ["a. snowsliding", "b. Snurfing", "c. Snurfall"],
     answer: "b"
     },
     {
-    question: "When was the first snowboarding competition organized?"
-    answers: ["a. Feb 1968", "b. Feb 1969", "c. March 1968"]
+    question: "When was the first snowboarding competition organized?",
+    answers: ["a. Feb 1968", "b. Feb 1969", "c. March 1968"],
     answer: "a"
     },
     {
-    uestion: "What is the name of the first manufacturer of snowboards?"
-    answers: ["a. Burton Snowboards", "b. Brunswick Corporation", "c. Poppen Snowboards"]
+    uestion: "What is the name of the first manufacturer of snowboards?",
+    answers: ["a. Burton Snowboards", "b. Brunswick Corporation", "c. Poppen Snowboards"],
     answer: "b"
     },
     {
-    question: "When was the first USA National Snowboard race held?"
-    answers: ["a. 1981", "b. 1980", "c. 1982"]
+    question: "When was the first USA National Snowboard race held?",
+    answers: ["a. 1981", "b. 1980", "c. 1982"],
     answer: "c"
     },
     {
-    question: "Who won the first olympic gold medal for Woman's snowboarding?"
-    answers: ["a. Karine Ruby", "b. Travis Rice", "c. Torstein Horgmo"]
+    question: "Who won the first olympic gold medal for Woman's snowboarding?",
+    answers: ["a. Karine Ruby", "b. Travis Rice", "c. Torstein Horgmo"],
     answer: "a"
     },
     {
-    question: "Who won the first olympic gold medal for Man's snowboarding?"
-    answers: ["a. Torah Bright", "b. Ross Rebagliati", "c. Hannah Teter"]
+    question: "Who won the first olympic gold medal for Man's snowboarding?",
+    answers: ["a. Torah Bright", "b. Ross Rebagliati", "c. Hannah Teter"],
     answer: "b"
-    },
+    }
 ]
 
 function countdown() {
     var timeSpan = setInterval(function() {
         timeRemaining--;
         timer.textContent = "Time Remaining: " + timeRemaining;
-        if (timer < = 0){
+        if (timer <=0) {
             clearInterval(timeSpan);
             timer.textContent = "Times up!";
             complete.textContent = "Times up!";
             gameOver();
        
-        } else if (count > = questions.length +1) {
+        } else if (count >=questions.length +1) {
             clearInterval(timeSpan)
             gameOver();
         }
@@ -122,7 +122,7 @@ function beginQuiz (){
 }
 
 function questionShown (n) {
-    questionAsked.textContent = questions[n].question:
+    questionAsked.textContent = questions[n].question;
     answer1.textContent = questions[n].answers[0];
     answer2.textContent = questions[n].answers[1];
     answer3.textContent = questions[n].answers[2];
@@ -152,7 +152,6 @@ if (numberQuestions < questions.length -1) {
         gameOver();
     }
     count++;
-}
 
 function gameOver() {
     questions.style.display = "none";
@@ -205,7 +204,7 @@ function sort() {
 
 function saveScore () {
     var scoreItem = {
-        user: userInitial.value
+        user: userInitial.value,
         score: totalScore
     }
     addItem(scoreItem);
@@ -214,7 +213,7 @@ function saveScore () {
 
 start.addEventListener("click", startQuiz);
 
-answerButton.forEach(function(click)
+answerButton.forEach(function(click){
 click.addEventListener("click", answerCheck);
 });
 
@@ -246,7 +245,7 @@ backButton.addEventListener("click", function(event){
 });
 
 clearButton.addEventListener("click", function (event){
-    event.preventDefault(;
+    event.preventDefault()
         localStorage.clear();
         renderScore();
 })

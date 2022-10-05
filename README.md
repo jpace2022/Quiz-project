@@ -20,7 +20,9 @@ Build a timed quiz that includes both multiple-choice questions and interactive 
 -[Questions](#questions)
 
 ## Screenshot Image
-![Snowboarding Quiz]()
+![Snowboarding Quiz](https://github.com/jpace2022/Quiz-project/blob/main/quiz%20screen%20shot%203.png)
+![Snowboarding Quiz](https://github.com/jpace2022/Quiz-project/blob/main/quiz%20screen%20shot%202.png)
+![Snowboarding Quiz](https://github.com/jpace2022/Quiz-project/blob/main/quiz%20screen%20shot%202.png)
 
 ## Finished Website
 [Snowboarding Quiz(https://jpace2022.github.io/Quiz-project/)]
